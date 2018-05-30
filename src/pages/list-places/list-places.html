@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      {{ title() }}
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list *ngIf="viewMode==='list'">
+    <ion-item *ngFor="let place of places()" (click)="goToPlace(place)">
+        <ion-title> {{ place.name }} </ion-title>
+        <ion-card>
+          <img src="../../assets/imgs/{{ place.icon }}"/>
+          <div class="card-title">{{ place.name }}</div>
+        </ion-card>
+    </ion-item>
+  </ion-list>
+
+  <div *ngIf="viewMode==='map'" style="width:100%;height:100%;" id="map"></div>
+</ion-content>
+
+<ion-footer padding>
+  <ion-segment [(ngModel)]="viewMode">
+      <ion-segment-button value="list">
+          <ion-icon name="list"></ion-icon>
+      </ion-segment-button>
+      <ion-segment-button value="map" (ionSelect)="showMap()">
+          <ion-icon name="map"></ion-icon>
+      </ion-segment-button>
+  </ion-segment>
+</ion-footer>
