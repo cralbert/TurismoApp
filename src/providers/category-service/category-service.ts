@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { CategoryModel } from '../../models/CategoryModel';
+import { CategoryModel } from '../../models/categoryModel';
 
 @Injectable()
 export class CategoryServiceProvider {
@@ -16,6 +16,6 @@ export class CategoryServiceProvider {
       new CategoryModel('BAR',"Bares","bar-icon.png"),
       new CategoryModel('DISCO',"Boliches","disco-icon.png"),
       new CategoryModel('OTHER',"Otros","bar-icon.png")
-    ]
+    ];
   }
 }

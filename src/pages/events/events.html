@@ -4,8 +4,39 @@
       <ion-icon name="menu"></ion-icon>
     </button>
     <ion-title>
-      Events
+      {{ title() }}
     </ion-title>
   </ion-navbar>
 </ion-header>
-<ion-content padding id="page4"></ion-content>
+
+
+<ion-content padding>
+  <ion-list *ngIf="viewModel ==='list'">
+    <ion-item *ngFor="let event of events()"> 
+        <ion-thumbnail item-start class="center">
+          <h3 text-center> {{ getDayOfWeek(event.date) }} </h3>
+          <h1 text-center> {{ event.date.getDate() }} </h1>
+          <h3 text-center> {{ getMonth(event.date) }} </h3>
+        </ion-thumbnail>
+        <h2> {{ event.title }} </h2>
+        <p> {{ event.description }} </p>
+        <button ion-button clear item-end (click)="goToEvent(event)">View</button>
+    </ion-item>
+  </ion-list>
+
+  <div *ngIf="viewModel==='calendar'" style="width:100%;height:100%;" id="calendar">
+    <ion-calendar #calendar></ion-calendar>
+  </div>
+
+</ion-content>
+
+<ion-footer padding>
+  <ion-segment [(ngModel)]="viewModel">
+      <ion-segment-button value="list">
+          <ion-icon name="md-bookmarks"></ion-icon>
+      </ion-segment-button>
+      <ion-segment-button value="calendar" (ionSelect)="showCalendar()">
+          <ion-icon name="md-calendar"></ion-icon>
+      </ion-segment-button>
+  </ion-segment>
+</ion-footer>
