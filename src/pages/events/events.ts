@@ -13,6 +13,7 @@ export class EventsPage {
 
   public viewModel: string = "list";
   listEvents: EventModel[];
+  currentEvents;
 
   constructor(public navCtrl: NavController,
               public eventService: EventServiceProvider,
@@ -33,7 +34,18 @@ export class EventsPage {
   }
 
   showCalendar() {
-
+    this.currentEvents = [
+      {
+        year: 2018,
+        month: 8,
+        date: 25
+      },
+      {
+        year: 2018,
+        month: 8,
+        date: 26
+      }
+    ];
   }
 
   getDayOfWeek(date: Date) {
@@ -43,4 +55,5 @@ export class EventsPage {
   getMonth(date: Date) {
     return this.dateServices.getMonth(date);
   }
+
 }

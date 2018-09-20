@@ -25,7 +25,10 @@
   </ion-list>
 
   <div *ngIf="viewModel==='calendar'" style="width:100%;height:100%;" id="calendar">
-    <ion-calendar #calendar lang="es"></ion-calendar>
+    <ion-calendar #calendar lang="es" [events]="currentEvents"></ion-calendar>
+    <div>
+      <h2> Test </h2> <p> Descripcion </p>
+    </div>
   </div>
 
 </ion-content>
