@@ -92,5 +92,5 @@
     <plugin name="cordova-plugin-geolocation" spec="^2.4.3">
         <variable name="GEOLOCATION_USAGE_DESCRIPTION" value=" " />
     </plugin>
-    <engine name="android" spec="~6.2.3" />
+    <engine name="android" spec="~7.1.0" />
 </widget>

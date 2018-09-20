@@ -10,8 +10,7 @@ import { CategoriesPage } from '../pages/categories/categories';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
-
-import { CalendarModule } from 'ionic3-calendar';
+import { CalendarModule } from 'ionic3-calendar-en';
 
 import { CategoryServiceProvider } from '../providers/category-service/category-service';
 import { ListPlacesPage } from '../pages/list-places/list-places';
@@ -31,8 +30,8 @@ import { DateUtilsProvider } from '../providers/utils/dates-utils-services';
   ],
   imports: [
     BrowserModule,
-    CalendarModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    CalendarModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [

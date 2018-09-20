@@ -8,13 +8,13 @@ export class EventServiceProvider {
 
   constructor() {
     this.events = [
-      new EventModel('Fiesta 1', new Date(2018, 7, 1), "Descripcion fiesta 1","bar-icon.png"),
+      new EventModel('Fiesta 1', new Date(2018, 10, 1), "Descripcion fiesta 1","bar-icon.png"),
       new EventModel('Fiesta 2', new Date(2018, 6, 10), "Descripcion fiesta 2","disco-icon.png"),
-      new EventModel('Fiesta 3', new Date(2018, 7, 4), "Descripcion fiesta 3","bar-icon.png"),
-      new EventModel('Fiesta 4', new Date(2018, 6, 1), "Descripcion fiesta 4","disco-icon.png"),
-      new EventModel('Fiesta 5', new Date(2018, 4, 1), "Descripcion fiesta 5","bar-icon.png"),
-      new EventModel('Fiesta 6', new Date(2018, 7, 1), "Descripcion fiesta 6","disco-icon.png"),
-      new EventModel('Fiesta 7', new Date(2018, 6, 1), "Descripcion fiesta 7","bar-icon.png")
+      new EventModel('Fiesta 3', new Date(2018, 10, 4), "Descripcion fiesta 3","bar-icon.png"),
+      new EventModel('Fiesta 4', new Date(2018, 12, 1), "Descripcion fiesta 4","disco-icon.png"),
+      new EventModel('Fiesta 5', new Date(2018, 11, 1), "Descripcion fiesta 5","bar-icon.png"),
+      new EventModel('Fiesta 6', new Date(2018, 10, 1), "Descripcion fiesta 6","disco-icon.png"),
+      new EventModel('Fiesta 7', new Date(2018, 9, 1), "Descripcion fiesta 7","bar-icon.png")
     ];
   }
 
